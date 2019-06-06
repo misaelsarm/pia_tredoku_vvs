@@ -1,0 +1,229 @@
+<html>
+
+<head>
+    <title>Modelo 2 - Tredoku</title>
+    <meta charset="utf-8">
+    <link href="css/modelo_2.css" rel="stylesheet" type="text/css" media="screen" />
+    <script type="text/javascript">
+        function justNumbers(e) {
+            var keynum = window.event ? window.event.keyCode : e.which;
+            if ((keynum == 8) || (keynum == 46))
+                return true;
+
+            return /\d/.test(String.fromCharCode(keynum));
+        }
+    </script>
+    <script src='js/jquery-2.1.4.min.js'></script>
+</head>
+
+<body>
+    <div class="encabezado">
+        <h1>Proyecto final - Equipo rosa</h1>
+        <h2>Tredoku </h2>
+        <button class="otro" id="refresh">Cambiar</button>
+    </div>
+    <div class="cuerpo">
+        <div class="fila1">
+            <form id="uno">
+
+                <input type="text" id="0" name="0" size="1" class="aq" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()">
+                <input type="text" id="1" name="1" size="1" class="aq" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()">
+                <input type="text" id="2" name="2" size="1" class="aq" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()"><br>
+
+
+                <input type="text" id="9" name="9" size="1" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()">
+                <input type="text" id="10" name="10" size="1" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()">
+                <input type="text" id="11" name="11" size="1" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()"><br>
+
+
+                <input type="text" id="18" name="18" size="1" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()">
+                <input type="text" id="19" name="19" size="1" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()">
+                <input type="text" id="20" name="20" size="1" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()"><br>
+            </form>
+
+
+            <form id="dos">
+                <input type="text" id="3" name="3" size="1" class="az" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()">
+                <input type="text" id="4" name="4" size="1" class="aq" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()">
+                <input type="text" id="5" name="5" size="1" class="aq" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()"><br>
+
+
+                <input type="text" id="12" name="12" size="1" class="az" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()">
+                <input type="text" id="13" name="13" size="1" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()">
+                <input type="text" id="14" name="14" size="1" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()"><br>
+
+
+                <input type="text" id="21" name="21" size="1" class="az" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()">
+                <input type="text" id="22" name="22" size="1" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()">
+                <input type="text" id="23" name="23" size="1" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()"><br>
+            </form>
+
+
+            <form id="tres">
+                <input type="text" id="6" name="6" size="1" class="red" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()">
+                <input type="text" id="7" name="7" size="1" class="aq" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()">
+                <input type="text" id="8" name="8" size="1" class="aq" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()"><br>
+
+
+                <input type="text" id="15" name="15" size="1" class="red" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()">
+                <input type="text" id="16" name="16" size="1" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()">
+                <input type="text" id="17" name="17" size="1" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()"><br>
+
+
+                <input type="text" id="24" name="24" size="1" class="red" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()">
+                <input type="text" id="25" name="25" size="1" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()">
+                <input type="text" id="26" name="26" size="1" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()"><br>
+            </form>
+        </div>
+        <div class="fila2">
+            <form id="cuatro">
+                <input type="text" id="27" name="27" size="1" class="az" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()">
+                <input type="text" id="28" name="28" size="1" class="am" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()">
+                <input type="text" id="29" name="29" size="1" class="am" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()"><br>
+
+
+                <input type="text" id="36" name="36" size="1" class="az" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()">
+                <input type="text" id="37" name="37" size="1" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()">
+                <input type="text" id="38" name="38" size="1" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()"><br>
+
+
+                <input type="text" id="45" name="45" size="1" class="az" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()">
+                <input type="text" id="46" name="46" size="1" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()">
+                <input type="text" id="47" name="47" size="1" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()"><br>
+            </form>
+
+
+            <form id="cinco">
+                <input type="text" id="30" name="30" size="1" class="red" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()">
+                <input type="text" id="31" name="31" size="1" class="am" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()">
+                <input type="text" id="32" name="32" size="1" class="am" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()"><br>
+
+
+                <input type="text" id="39" name="39" size="1" class="red" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()">
+                <input type="text" id="40" name="40" size="1" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()">
+                <input type="text" id="41" name="41" size="1" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()"><br>
+
+
+                <input type="text" id="48" name="48" size="1" class="red" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()">
+                <input type="text" id="49" name="49" size="1" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()">
+                <input type="text" id="50" name="50" size="1" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()"><br>
+            </form>
+
+
+            <form id="seis">
+                <input type="text" id="33" name="33" size="1" class="am" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()">
+                <input type="text" id="34" name="34" size="1" class="am" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()">
+                <input type="text" id="35" name="35" size="1" class="am" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()"><br>
+
+
+                <input type="text" id="42" name="42" size="1" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()">
+                <input type="text" id="43" name="43" size="1" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()">
+                <input type="text" id="44" name="44" size="1" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()"><br>
+
+
+                <input type="text" id="51" name="51" size="1" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()">
+                <input type="text" id="52" name="52" size="1" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()">
+                <input type="text" id="53" name="53" size="1" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()"><br>
+            </form>
+        </div>
+        <div class="fila3">
+            <form id="siete">
+                <input type="text" id="54" name="54" size="1" class="red" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()">
+                <input type="text" id="55" name="55" size="1" class="red" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()">
+                <input type="text" id="56" name="56" size="1" class="red" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()"><br>
+
+                <input type="text" id="57" name="57" size="1" class="az" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()">
+                <input type="text" id="58" name="58" size="1" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()">
+                <input type="text" id="59" name="59" size="1" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()"><br>
+
+
+                <input type="text" id="60" name="60" size="1" class="az" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()">
+                <input type="text" id="61" name="61" size="1" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()">
+                <input type="text" id="62" name="62" size="1" maxlength="1" onkeypress="return justNumbers(event);" onkeyup="comparison()"><br>
+            </form>
+        </div>
+        <a href="index.html">Volver</a>
+    </div>
+    <script type="text/javascript">
+        var matrix = [
+            7, 3, 5, 2, 6, 4, 1, 9, 8,
+            4, 6, 2, 1, 9, 8, 3, 7, 5,
+            9, 1, 8, 3, 7, 5, 2, 6, 4,
+
+            8, 2, 3, 4, 1, 7, 5, 9, 6,
+            7, 4, 6, 9, 5, 3, 1, 8, 2,
+            9, 5, 1, 6, 8, 2, 3, 7, 4,
+
+            5, 8, 7,
+            4, 3, 2,
+            6, 1, 9
+        ];
+        var mask = [];
+        var game = [];
+
+        var m = 9,
+            a = 7,
+            c = 4;
+        var d = new Date();
+        var n = d.getTime();
+        var LCM = function() {
+            n = (a * n + c) % m;
+            return n;
+        }
+
+        function maskBoardEasy(matrix, mask) {
+            var i, j, k, p;
+            for (i = 0; i < 90; i++)
+                mask[i] = matrix[i];
+
+            for (var i = 0; i < 3; i++) {
+                for (var j = 0; j < 3; j++) {
+                    for (var k = 0; k < 5; k++) {
+                        var c;
+                        do {
+                            c = Math.floor(LCM());
+                        }
+                        while (mask[(i * 3 + Math.floor(c / 3)) * 10 + j * 3 + c % 3] == 0);
+
+                        mask[(i * 3 + Math.floor(c / 3)) * 10 + j * 3 + c % 3] = null;
+                        for (var p = 0; p < 90; p++) {
+                            var o = mask[p];
+                            var inp_id = p.toString();
+                            var op = "#" + inp_id
+                            var compra_id = $(op).val(o);
+                        }
+                    }
+                }
+            }
+        }
+        maskBoardEasy(matrix, mask);
+        var refreshRate = 1000 / 30;
+
+        function refresh() {
+            setInterval(comparison, refreshRate);
+        }
+        $('#refresh').click(function() {
+            location.reload();
+        });
+
+        function comparison() {
+            for (var i = 0; i < 90; i++) {
+                var f = i.toString();
+                var val = document.getElementById(f);
+                var s = val.value;
+                var pos = parseInt(val.name);
+                game[pos] = s;
+                if (game[pos] == matrix[pos]) {
+                    document.getElementById(f).style.color = "black";
+                    document.getElementById(f).style.fontWeight = "bold";
+                } else {
+                    document.getElementById(f).style.color = "red";
+                    document.getElementById(f).style.fontWeight = "bold";
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>
